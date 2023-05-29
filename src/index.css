@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.container {
+  color: #333;
+
+  & h2 {
+    color: red;
+
+    @apply text-3xl;
+  }
+}
