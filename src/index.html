@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>unicode-demo</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.css" />
   <style>
     div.code {
       white-space: pre;
@@ -24,9 +24,10 @@
   <div class="container">
     <h2>unicode 表示法</h2>
     <p>unicode 在css hmlt javascript中的使用</p>
-    <h3>html 中使用 &# + 16进制的unicode编码 + 分号;</h3>
+    <h3>html 中使用 &amp;# + 16进制的unicode编码 + 分号;</h3>
     <p>\u70ed\u0488\u7684\u0488\u5b57\u0488\u90fd\u0488\u51fa\u0488\u6c57\u0488\u4e86\u0488</p>
-    <p>&#28909;&#1160;&#1160;&#30340;&#1160;&#23383;&#1160;&#37117;&#1160;&#20986;&#1160;&#27735;&#1160;&#20102;&#1160;
+    <p>
+      &#28909;&#1160;&#1160;&#30340;&#1160;&#23383;&#1160;&#37117;&#1160;&#20986;&#1160;&#27735;&#1160;&#20102;&#1160;
     </p>
     <pre><code class="language-html">&lt;p&gt;&amp;#28909;&amp;#1160;&amp;#1160;&amp;#30340;&amp;#1160;&amp;#23383;&amp;#1160;&amp;#37117;&amp;#1160;&amp;#20986;&amp;#1160;&amp;#27735;&amp;#1160;&amp;#20102;&amp;#1160;&lt;/p&gt;</code></pre>
     <p>另外一些特殊字符还有其他表示，也就是常说的 html 转义符：</p>
@@ -39,10 +40,11 @@
     <h3>javascript 中使用 \u + 16进制的unicode编码</h3>
     <p id="unicode-javascript"></p>
     <script>
-      document.getElementById('unicode-javascript').innerHTML = '\u70ed\u0488\u7684\u0488\u5b57\u0488\u90fd\u0488\u51fa\u0488\u6c57\u0488\u4e86\u0488';
+      document.getElementById('unicode-javascript').innerHTML =
+        '\u70ed\u0488\u7684\u0488\u5b57\u0488\u90fd\u0488\u51fa\u0488\u6c57\u0488\u4e86\u0488';
     </script>
     <pre><code class="language-javascript">document.getElementById('#unicode-javascript').innerHTML = '\u70ed\u0488\u7684\u0488\u5b57\u0488\u90fd\u0488\u51fa\u0488\u6c57\u0488\u4e86\u0488';</code></pre>
-    <p>另外 javascript 还有使用 0x 表示16进制。例如： </p>
+    <p>另外 javascript 还有使用 0x 表示16进制。例如：</p>
     <pre><code class="language-javascript">String.fromCodePoint('0x20bb7')</code></pre>
     <ul>
       <li><a href="./string2unicode.html">string转unicode</a></li>

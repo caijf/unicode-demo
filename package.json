@@ -3,20 +3,42 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/*.html"
+    "build": "parcel build src/*.html",
+    "prettier": "prettier --write **/*",
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": "git@github.com:caijf/unicode-demo.git",
   "author": "caijf <369756941@qq.com>",
   "license": "MIT",
+  "lint-staged": {
+    "**/*.{js,mjs,jsx,ts,tsx}": "eslint",
+    "**/*.{css,scss,less,js,mjs,jsx,ts,tsx,json,md}": "prettier -w"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
     "autoprefixer": "^10.4.13",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.50.0",
     "highlight.js": "^11.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
     "parcel": "^2.7.0",
     "postcss": "^8.4.19",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.3",
+    "prettier": "^3.0.3",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3"
   },

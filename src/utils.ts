@@ -4,7 +4,6 @@
 
 // 如果要使用 \u 表示法，就需要使用 toString 转 16进制，再处理。
 
-
 // unicode 转字符串
 export function unicodeToString(code: string) {
   return JSON.parse(`"\\u${code}"`);
@@ -14,4 +13,3 @@ export function unicodeToString(code: string) {
 export function stringToUnicode(str: string) {
   return str.charCodeAt(0).toString(16);
 }
-
