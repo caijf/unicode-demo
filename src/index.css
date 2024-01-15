@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+  line-height: 1.5;
+}
+
 .container {
   color: #333;
 
